@@ -47,7 +47,7 @@ namespace PromotionEngine.UnitTests
             var apiController = new PromotionEngineController(this.mockPromotionEngineHandler.Object);
             var price = apiController.CalculateTotalPrice(inputItemList);
 
-            Assert.AreEqual(price, 100);
+            Assert.AreEqual(price, 370);
         }
 
         [TestCase]
@@ -63,7 +63,7 @@ namespace PromotionEngine.UnitTests
             var apiController = new PromotionEngineController(this.mockPromotionEngineHandler.Object);
             var price = apiController.CalculateTotalPrice(inputItemList);
 
-            Assert.AreEqual(price, 100);
+            Assert.AreEqual(price, 280);
         }
     }
 }
