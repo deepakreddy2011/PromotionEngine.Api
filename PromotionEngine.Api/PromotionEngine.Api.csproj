@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PromotionEngine.Core\PromotionEngine.Core.csproj" />
+    <ProjectReference Include="..\PromotionEngine.Infrastructure\PromotionEngine.Infrastructure.csproj" />
   </ItemGroup>
 
 

@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using PromotionEngine.Core.Interfaces;
+using PromotionEngine.Infrastructure.Promotions;
 
 namespace PromotionEngine.Api
 {
@@ -27,7 +29,9 @@ namespace PromotionEngine.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
+            services.AddTransient<IPromotion, PromotionForA>();
+            services.AddTransient<IPromotion, PromotionForB>();
+            services.AddTransient<IPromotion, PromotionForCandD>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Promotion Engine", Version = "v1" });

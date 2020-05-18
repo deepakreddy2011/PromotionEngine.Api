@@ -9,6 +9,8 @@ namespace PromotionEngine.Core
         public string Id { get; set; }
 
         public int Quantity { get; set; }
+
+        public int Cost { get; set; }
     }
 
 }
