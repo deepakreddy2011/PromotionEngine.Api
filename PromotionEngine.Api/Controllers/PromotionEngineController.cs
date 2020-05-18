@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PromotionEngine.Core;
 using PromotionEngine.Core.Interfaces;
 
 namespace PromotionEngine.Api.Controllers
@@ -18,6 +19,13 @@ namespace PromotionEngine.Api.Controllers
         public PromotionEngineController(IPromotionEngineHandler promotionEngineHandler) 
         {
             this.promotionEngineHandler = promotionEngineHandler;
+        }
+
+        [HttpPost]
+        public decimal CalculateTotalPrice(List<Item> items) 
+        {
+            var totalPrice = this.promotionEngineHandler.CalculateTotalPrice(items);
+            return totalPrice;
         }
     }
 }
