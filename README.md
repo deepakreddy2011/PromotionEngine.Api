@@ -1,4 +1,4 @@
-# PromotionEngine
+# Promotion Engine
 Promotion Engine which returns cart total after successful application of promotions
 Clean/Onion architecture is followed for api implementaion
 Domain models and Promotion interfaces are kept inside 'Core'
