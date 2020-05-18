@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PromotionEngine.Api\PromotionEngine.Api.csproj" />
+    <ProjectReference Include="..\PromotionEngine.Infrastructure\PromotionEngine.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
