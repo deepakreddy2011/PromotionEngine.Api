@@ -11,7 +11,7 @@ namespace PromotionEngine.Api.Controllers
 {
     [ApiController]
     [ApiVersion("1.0")]
-    [Route("api/v{version:apiVersion}/[PromotionEngine]")]
+    [Route("api/[controller]")]
     public class PromotionEngineController : ControllerBase
     {
         private IPromotionEngineHandler promotionEngineHandler;
